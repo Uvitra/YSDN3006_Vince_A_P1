@@ -1,0 +1,160 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>NBA 2017–2018 Season</title>
+  <meta name="description" content="An overview of the 2017–2018 season of NBA">
+  <meta name="author" content="Aaron Vince">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+	<script src="assets/d3/d3.js" charset="utf-8"></script>
+	<!-- <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script> -->
+
+</head>
+
+<body>
+  <div class="wrapper">
+      <header class="main-head">
+        <h1><span class="letter letter-N">N</span><span class="letter letter-B">B</span><span class="letter letter-A">A</span><br><span class="letter title-years">2017–18</span><br><span class="letter season-word">Season</span></h1>
+        <video class="background-video" preload="true" autoplay loop muted >
+          <source src="assets/video/giphy.mp4" type="video/mp4" >
+        </video>
+				<div class="black-box"></div>
+      </header>
+	      <!-- <nav class="main-nav">
+          <ul>
+              <li><a href="/">Nav 1</a></li>
+              <li><a href="/">Nav 2</a></li>
+              <li><a href="/">Nav 3</a></li>
+          </ul>
+      </nav> -->
+      <article class="content wins-graph">
+        <h1>2017–2018 in Wins</h1>
+        <p>Each win the graph goes up!</p>
+        <svg class="chart"></svg>
+      </article>
+			<div class="white-box"></div>
+			<article class="content top-performers">
+        <h1>2017–2018 NBA Top Performers</h1>
+
+				<div class="top-performers-card">
+					<h3>Points Per Game</h3>
+					<img src="assets/img/GSWpics/JamesHarden.png" alt="A photo of James Harden" width="260" height="190">
+					<p class="player-name big-name">1. James Harden<span class="stat-number big-number">30.4</span></p>
+					<p class="player-name">2. Anthony Davis<span class="stat-number">28.1</span></p>
+					<p class="player-name">3. LeBron James<span class="stat-number">27.5</span></p>
+					<p class="player-name">4. Damian Lillard<span class="stat-number">26.9</span></p>
+					<p class="player-name">4. Giannis Antetokounmpo<span class="stat-number">26.9</span></p>
+				</div>
+
+      </article>
+			<article class="content team-ratings">
+        <h1>2017–2018 Team Ratings</h1>
+        <p>|</p>
+        <svg class="team-ratings-svg"></svg>
+      </article>
+			<article class="content playoff-brackets">
+        <h1>2017–2018 Playoffs</h1>
+        <p>|</p>
+
+      </article>
+			<article class="content nba-champs">
+				<header class="champs-header">
+					<div class="champs-header-text">
+		        <h1>2017–2018 NBA Champions</h1>
+		        <h2>Golden State Warriors</h2>
+					</div>
+					<img src="assets/img/GSW_logo.svg" alt="The Golden State Warriors Logo" />
+				</header>
+				<section class="gsw-lineup">
+					<div class="gsw-card gsw-sf">
+						<header class="gsw-card-header">
+							<h3>Kevin Durant</h3>
+							<p class="player-position">SF</p>
+						</header>
+						<img src="assets/img/GSWpics/KevinDurant.png" alt="A photo of Kevin Durant" width="260" height="190">
+						<div class="playoff-stats">
+							<p class="stats stats-big">Points Per Game<span class="stats-number">29.0</span></p>
+							<p class="stats">Field Goal Percentage<span class="stats-number">48.7%</span></p>
+							<p class="stats">Rebounds<span class="stats-number">7.8</span></p>
+							<p class="stats">Assists<span class="stats-number">4.7</span></p>
+							<p class="stats">Blocks<span class="stats-number">1.2</span></p>
+							<p class="stats">+/- Plus Minus<span class="stats-number">9.9</span></p>
+						</div>
+					</div>
+					<div class="gsw-card gsw-pf">
+						<header class="gsw-card-header">
+							<h3>Draymond Green</h3>
+							<p class="player-position">PF</p>
+						</header>
+						<img src="assets/img/GSWpics/DraymondGreen.png" alt="A photo of Draymond Green" width="260" height="190">
+						<div class="playoff-stats">
+							<p class="stats stats-big">Points Per Game<span class="stats-number">39.0</span></p>
+							<p class="stats">Field Goal Percentage<span class="stats-number">43.2%</span></p>
+							<p class="stats">Rebounds<span class="stats-number">10.6</span></p>
+							<p class="stats">Assists<span class="stats-number">8.1</span></p>
+							<p class="stats">Blocks<span class="stats-number">1.5</span></p>
+							<p class="stats">+/- Plus Minus<span class="stats-number">8.7</span></p>
+						</div>
+					</div>
+					<div class="gsw-card gsw-c">
+						<header class="gsw-card-header">
+							<h3>JaVale McGee</h3>
+							<p class="player-position">C</p>
+						</header>
+						<img src="assets/img/GSWpics/JaValeMcGee.png" alt="A photo of JaVale McGee" width="260" height="190">
+						<div class="playoff-stats">
+							<p class="stats stats-big">Points Per Game<span class="stats-number">6.5</span></p>
+							<p class="stats">Field Goal Percentage<span class="stats-number">67.2%</span></p>
+							<p class="stats">Rebounds<span class="stats-number">3.2</span></p>
+							<p class="stats">Assists<span class="stats-number">0.3</span></p>
+							<p class="stats">Blocks<span class="stats-number">0.8</span></p>
+							<p class="stats">+/- Plus Minus<span class="stats-number">2.8</span></p>
+						</div>
+					</div>
+					<div class="gsw-card gsw-sg">
+						<header class="gsw-card-header">
+							<h3>Klay Thompson</h3>
+							<p class="player-position">SG</p>
+						</header>
+						<img src="assets/img/GSWpics/KlayThompson.png" alt="A photo of Klay Thompson" width="260" height="190">
+						<div class="playoff-stats">
+							<p class="stats stats-big">Points Per Game<span class="stats-number">19.6</span></p>
+							<p class="stats">Field Goal Percentage<span class="stats-number">46.5%</span></p>
+							<p class="stats">Rebounds<span class="stats-number">4.1</span></p>
+							<p class="stats">Assists<span class="stats-number">1.8</span></p>
+							<p class="stats">Blocks<span class="stats-number">0.3</span></p>
+							<p class="stats">+/- Plus Minus<span class="stats-number">7.0</span></p>
+						</div>
+					</div>
+					<div class="gsw-card gsw-pg">
+						<header class="gsw-card-header">
+							<h3>Steph Curry</h3>
+							<p class="player-position">PG</p>
+						</header>
+						<img src="assets/img/GSWpics/StephCurry.png" alt="A photo of Steph Curry" width="260" height="190">
+						<div class="playoff-stats">
+							<p class="stats stats-big">Points Per Game<span class="stats-number">25.5</span></p>
+							<p class="stats">Field Goal Percentage<span class="stats-number">45.1%</span></p>
+							<p class="stats">Rebounds<span class="stats-number">6.1</span></p>
+							<p class="stats">Assists<span class="stats-number">5.4</span></p>
+							<p class="stats">Blocks<span class="stats-number">0.7</span></p>
+							<p class="stats">+/- Plus Minus<span class="stats-number">9.8</span></p>
+						</div>
+					</div>
+				</section>
+      </article>
+      <!-- <aside class="side">Sidebar</aside> -->
+      <!-- <div class="ad">Advertising</div> -->
+      <footer class="main-footer">
+				<p>Made by <a href="aaronvince.design">Me</a> for <a href="design.yorku.ca">YSDN</a></p>
+				<p>Designed with ❤️ in Toronto</p>
+				<p>Statistics and data provided by the <a href="stats.nba.com">NBA</a></p>
+			</footer>
+  </div>
+
+  <script src="js/scripts.js" ></script>
+</body>
+</html>

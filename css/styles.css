@@ -1,0 +1,410 @@
+/* Import some fonts */
+@font-face {
+  font-family: FiraSansCompressed;
+  src: url(../assets/fonts/Compressed/Roman/FiraSansCompressed-Heavy.woff2);
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: FiraSansCompressed;
+  src: url(../assets/fonts/Compressed/Roman/FiraSansCompressed-ExtraBold.woff2);
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: FiraSansCompressed;
+  src: url(../assets/fonts/Compressed/Roman/FiraSansCompressed-Bold.woff2);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: FiraSansCompressed;
+  src: url(../assets/fonts/Compressed/Roman/FiraSansCompressed-Medium.woff2);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: FiraSansCompressed;
+  src: url(../assets/fonts/Compressed/Roman/FiraSansCompressed-regular.woff2);
+  font-weight: 400;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font: normal normal 400 12px/1.2 FiraSansCompressed, sans-serif;
+}
+
+a {
+  color: hsla(210, 5%, 5%, 1);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.5s;
+}
+
+a:hover {
+  color: hsla(10, 85%, 50%, 1);
+}
+
+/* Start of CSS Grid Layout */
+
+/* This gives the container element 12 columns, colunmn and row gutters and defines the grid row template */
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  grid-gap: 20px;
+  grid-template-rows:
+    100vh /* => splash height */
+    100px /* => nav height */
+    100vh /* => wins graph height */
+    100vh /* => top performers height*/
+    100vh /* => team Ratings height*/
+    100vh /* => playoff brackets height*/
+    auto /* => nba champs height*/
+    100px /* => footer height*/;
+}
+
+/* This tells the browser to display all elements to full width (mobile first)  */
+.wrapper > * {
+  grid-column: col-start / span 12;
+  background: hsla(0, 0%, 100%, 1);
+}
+
+/* End of CSS Grid Layout */
+
+/* Mobile first styles begin here */
+.main-head > * {
+  background: hsla(0, 0%, 100%, 0);
+}
+
+.main-head {
+  grid-column: 1 / span 12;
+  grid-row: 1 / span 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsla(210, 50%, 50%, 0.5);
+}
+
+.main-head > * {
+  position: absolute;
+}
+
+.main-head h1 {
+  color: white;
+  text-align: center;
+  font: 900 20vmin/85% FiraSansCompressed, sans-serif;
+  text-shadow: 2px 2px hsla(210, 5%, 5%, 0.25);
+  text-transform: uppercase;
+}
+
+.background-video {
+  z-index: -100;
+  background-size: cover;
+  background-position: center top;
+  min-width: 100%;
+  min-height: 100%;
+  /* height: 100%; */
+  overflow: hidden;
+}
+
+.black-box {
+  background-color: black;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -9999;
+}
+
+.white-box {
+  position: relative;
+  top: -20px;
+  grid-column: col-start / span 12;
+  grid-row: 2 / span 2;
+  background: white;
+  /* opacity: 0.5; */
+  z-index: -1;
+}
+
+.main-nav {
+  background-color: hsla(180, 10%, 90%, 0.5);
+}
+
+@keyframes letterAnimation {
+  0%,
+  6% { opacity: 0; }
+
+  7%,
+  8% { opacity: 1; }
+
+  9%,
+  11% { opacity: 0; }
+
+  12%,
+  13% { opacity: 1; }
+
+  15%,
+  100% { opacity: 1; }
+}
+
+.letter {
+  opacity: 1;
+  animation: letterAnimation 3s;
+  animation-iteration-count: infinite;
+}
+
+.letter-N {
+  animation-delay: 0s;
+}
+
+.letter-B {
+  animation-delay: 0.125s;
+}
+
+.letter-A {
+  animation-delay: 0.25s;
+}
+
+.title-years {
+  animation-delay: 0.375s;
+}
+
+.season-word {
+  animation-delay: 0.5s;
+}
+
+.wins-graph {
+  grid-column: col-start / span 12;
+  grid-row: 3 / span 1;
+}
+
+.top-performers {
+  grid-column: col-start / span 12;
+  grid-row: 4 / span 1;
+}
+
+.team-ratings {
+  grid-column: col-start / span 12;
+  grid-row: 5 / span 1;
+}
+
+.playoff-brackets {
+  grid-column: col-start / span 12;
+  grid-row: 6 / span 1;
+}
+
+/* GSW Champs section starts here */
+.nba-champs {
+  grid-column: col-start / span 12;
+  grid-row: 7 / span 1;
+  border-top: 1px solid grey;
+  padding: 10px;
+}
+
+.champs-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.champs-header img {
+  height: 5rem;
+}
+
+.gsw-lineup {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.gsw-card {
+  width: 45%;
+  border: 1px solid grey;
+  margin-bottom: 20px;
+}
+
+.gsw-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  border-bottom: 1px solid grey;
+  font-size: 150%;
+}
+
+.gsw-card-header p {
+  border-left: 1px solid grey;
+  padding-left: 10px;
+  height: 100%;
+}
+
+.gsw-card img {
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+  border-bottom: 1px solid grey;
+}
+
+.playoff-stats p {
+  padding: 4px 8px;
+  margin: 0;
+}
+
+.playoff-stats p:nth-child(even) {
+  background-color: hsla(210, 5%, 95%, 1);
+}
+
+.stats-number {
+  float: right;
+}
+
+.playoff-stats .stats-big {
+  font-size: 150%;
+}
+
+/* Footer information starts here  */
+.main-footer {
+  grid-column: col-start / span 12;
+  grid-row: 8 / span 1;
+  background-color: hsla(210, 5%, 95%, 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.main-footer p {
+  width: 25%;
+  text-align: center;
+}
+
+/* Mobile first styles end here */
+
+/* Specific media styles (small to large screens) begin here */
+@media (min-width: 576px) {
+  .side {
+    grid-column: col-start / span 3;
+    grid-row: 3;
+  }
+
+  .ad {
+    grid-column: col-start / span 3;
+    grid-row: 4;
+  }
+
+  .content {
+    grid-column: col-start 4 / span 9;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* .main-footer {
+    grid-column: col-start / span 12;
+  } */
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    grid-column: col-start / span 2;
+    grid-row: 2 / 4;
+  }
+
+  .content {
+    grid-column: col-start 3 / span 8;
+    /* grid-row: 2 / 4; */
+  }
+
+  .side {
+    grid-column: col-start 11 / span 2;
+    grid-row: 2;
+  }
+
+  .ad {
+    grid-column: col-start 11 / span 2;
+    grid-row: 3;
+  }
+
+  /* .main-footer {
+    grid-column: col-start / span 12;
+  } */
+
+  nav ul {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-nav {
+    grid-column: col-start / span 2;
+    grid-row: 2 / 4;
+  }
+
+  .content {
+    grid-column: col-start 3 / span 8;
+    /* grid-row: 2 / 4; */
+  }
+
+  .side {
+    grid-column: col-start 11 / span 2;
+    grid-row: 2;
+  }
+
+  .ad {
+    grid-column: col-start 11 / span 2;
+    grid-row: 3;
+  }
+
+  /* .main-footer {
+    grid-column: col-start / span 12;
+  } */
+
+  nav ul {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* body {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  } */
+
+  /* .wrapper {
+    width: 1200px;
+  } */
+
+  .main-nav {
+    grid-column: col-start / span 2;
+    grid-row: 2 / 4;
+  }
+
+  .content {
+    grid-column: col-start 3 / span 8;
+    /* grid-row: 2 / 4; */
+  }
+
+  .side {
+    grid-column: col-start 11 / span 2;
+    grid-row: 2;
+  }
+
+  .ad {
+    grid-column: col-start 11 / span 2;
+    grid-row: 3;
+  }
+
+  /* .main-footer {
+    grid-column: col-start / span 12;
+  } */
+
+  nav ul {
+    flex-direction: column;
+  }
+}
+
+/* Specific media styles end here */
