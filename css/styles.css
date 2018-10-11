@@ -1,4 +1,6 @@
 /* Import some fonts */
+
+/* FiraSansCompressed files */
 @font-face {
   font-family: FiraSansCompressed;
   src: url(../assets/fonts/Compressed/Roman/FiraSansCompressed-Heavy.woff2);
@@ -29,6 +31,117 @@
   font-weight: 400;
 }
 
+/* Zilla Slab files */
+@font-face {
+  font-family: "Zilla Slab";
+  src:
+    url('../assets/fonts/zilla-slab/woff2/ZillaSlab-Bold.woff2') format('woff2'),
+    url('../assets/fonts/zilla-slab/woff/ZillaSlab-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Zilla Slab";
+  src:
+    url('assets/fonts/zilla-slab/woff2/ZillaSlab-BoldItalic.woff2') format('woff2'),
+    url('assets/fonts/zilla-slab/woff/ZillaSlab-BoldItalic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Zilla Slab";
+  src:
+    url('../assets/fonts/zilla-slab/woff2/ZillaSlab-Italic.woff2') format('woff2'),
+    url('../assets/fonts/zilla-slab/woff/ZillaSlab-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Zilla Slab";
+  src:
+    url('../assets/fonts/zilla-slab/woff2/ZillaSlab-Light.woff2') format('woff2'),
+    url('../assets/fonts/zilla-slab/woff/ZillaSlab-Light.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Zilla Slab";
+  src:
+    url('../assets/fonts/zilla-slab/woff2/ZillaSlab-LightItalic.woff2') format('woff2'),
+    url('../assets/fonts/zilla-slab/woff/ZillaSlab-LightItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Zilla Slab";
+  src:
+    url('../assets/fonts/zilla-slab/woff2/ZillaSlab-Medium.woff2') format('woff2'),
+    url('../assets/fonts/zilla-slab/woff/ZillaSlab-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Zilla Slab";
+  src:
+    url('../assets/fonts/zilla-slab/woff2/ZillaSlab-MediumItalic.woff2') format('woff2'),
+    url('../assets/fonts/zilla-slab/woff/ZillaSlab-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Zilla Slab";
+  src:
+    url('../assets/fonts/zilla-slab/woff2/ZillaSlab-Regular.woff2') format('woff2'),
+    url('../assets/fonts/zilla-slab/woff/ZillaSlab-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Zilla Slab";
+  src:
+    url('../assets/fonts/zilla-slab/woff2/ZillaSlab-SemiBold.woff2') format('woff2'),
+    url('../assets/fonts/zilla-slab/woff/ZillaSlab-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Zilla Slab";
+  src:
+    url('../assets/fonts/zilla-slab/woff2/ZillaSlab-SemiBoldItalic.woff2') format('woff2'),
+    url('../assets/fonts/zilla-slab/woff/ZillaSlab-SemiBoldItalic.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Zilla Slab";
+  src:
+    url('../assets/fonts/zilla-slab/woff2/ZillaSlabHighlight-Bold.woff2') format('woff2'),
+    url('../assets/fonts/zilla-slab/woff/ZillaSlabHighlight-Bold.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Zilla Slab";
+  src:
+    url('../assets/fonts/zilla-slab/woff2/ZillaSlabHighlight-Regular.woff2') format('woff2'),
+    url('../assets/fonts/zilla-slab/woff/ZillaSlabHighlight-Regular.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* End @font-face stuff */
+
 html,
 body {
   padding: 0;
@@ -37,7 +150,7 @@ body {
 }
 
 body {
-  font: normal normal 400 12px/1.2 FiraSansCompressed, sans-serif;
+  font: normal normal 400 12px/1.2 "Zilla Slab", sans-serif;
 }
 
 a {
@@ -62,17 +175,21 @@ a:hover {
     100vh /* => splash height */
     100px /* => nav height */
     100vh /* => wins graph height */
-    100vh /* => top performers height*/
-    100vh /* => team Ratings height*/
-    100vh /* => playoff brackets height*/
-    auto /* => nba champs height*/
+    100vh /* => Margins of Time graph height*/
+    100vh /* => Playoffs 1 height*/
+    100vh /* => Playoffs 2 height*/
+    100vh /* => Heartbreak height*/
+    100vh /* => Offseason height*/
+    100vh /* => Kawhi & DeMar Trade height*/
+    100vh /* => 2018–19 Starting Line-up height*/
+    100vh /* => Top Ten Games to Watch Graph height*/
+    100vh /* => Go Raps Go! height*/
     100px /* => footer height*/;
 }
 
 /* This tells the browser to display all elements to full width (mobile first)  */
 .wrapper > * {
   grid-column: col-start / span 12;
-  background: hsla(0, 0%, 100%, 1);
 }
 
 /* End of CSS Grid Layout */
@@ -89,87 +206,21 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: hsla(210, 50%, 50%, 0.5);
 }
 
 .main-head h1 {
-  color: white;
+  color: #CD1141;
   text-align: center;
-  font: 900 20vmin/85% FiraSansCompressed, sans-serif;
-  text-shadow: 2px 2px hsla(210, 5%, 5%, 0.25);
+  font-size: 15vmin;
+  line-height: 1;
+  font-weight: 900;
+  font-variant: normal;
+  text-shadow: 4px 4px hsla(210, 5%, 5%, 0.25);
   text-transform: uppercase;
-}
-
-.background-video {
-  z-index: -100;
-  background-size: cover;
-  background-position: center top;
-  min-width: 100%;
-  min-height: 100%;
-  overflow: hidden;
-}
-
-.black-box {
-  background-color: black;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -9999;
-}
-
-.white-box {
-  position: relative;
-  top: -20px;
-  grid-column: col-start / span 12;
-  grid-row: 2 / span 2;
-  background: white;
-  z-index: -1;
 }
 
 .main-nav {
   background-color: hsla(180, 10%, 90%, 0.5);
-}
-
-@keyframes letterAnimation {
-  0%,
-  6% { opacity: 0; }
-
-  7%,
-  8% { opacity: 1; }
-
-  9%,
-  11% { opacity: 0; }
-
-  12%,
-  13% { opacity: 1; }
-
-  15%,
-  100% { opacity: 1; }
-}
-
-.letter {
-  opacity: 1;
-  animation: letterAnimation 3s;
-  animation-iteration-count: 1;
-}
-
-.letter-N {
-  animation-delay: 0s;
-}
-
-.letter-B {
-  animation-delay: 0.125s;
-}
-
-.letter-A {
-  animation-delay: 0.25s;
-}
-
-.title-years {
-  animation-delay: 0.375s;
-}
-
-.season-word {
-  animation-delay: 0.5s;
 }
 
 .wins-graph {
@@ -260,7 +311,7 @@ a:hover {
 .main-footer {
   grid-column: col-start / span 12;
   grid-row: 8 / span 1;
-  background-color: hsla(210, 5%, 95%, 1);
+  background-color: hsla(225, 7%, 24%, 1);
   display: flex;
   align-items: center;
   justify-content: space-around;
