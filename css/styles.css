@@ -153,6 +153,11 @@ body {
   font: normal normal 400 12px/1.2 "Zilla Slab", sans-serif;
 }
 
+.content > h1 {
+  color: white;
+  font-size: 5vmin;
+}
+
 a {
   color: hsla(210, 5%, 5%, 1);
   text-decoration: none;
@@ -172,19 +177,19 @@ a:hover {
   grid-template-columns: repeat(12, [col-start] 1fr);
   grid-gap: 20px;
   grid-template-rows:
-    100vh /* => splash height */
-    100px /* => nav height */
-    100vh /* => wins graph height */
-    100vh /* => Margins of Time graph height*/
-    100vh /* => Playoffs 1 height*/
-    100vh /* => Playoffs 2 height*/
-    100vh /* => Heartbreak height*/
-    100vh /* => Offseason height*/
-    100vh /* => Kawhi & DeMar Trade height*/
-    100vh /* => 2018–19 Starting Line-up height*/
-    100vh /* => Top Ten Games to Watch Graph height*/
-    100vh /* => Go Raps Go! height*/
-    100px /* => footer height*/;
+    100vh /* 1  => main-head splash height */
+    50px  /* 2  => nav height //subject to change */
+    100vh /* 3  => wins graph height */
+    100vh /* 4  => margins over time graph height*/
+    100vh /* 5  => Playoffs 1 height*/
+    100vh /* 6  => Playoffs 2 height*/
+    100vh /* 7  => Heartbreak height*/
+    100vh /* 8  => Offseason height*/
+    100vh /* 9  => Kawhi & DeMar Trade height*/
+    100vh /* 10 => 2018–19 Starting Line-up height*/
+    100vh /* 11 => Top Ten Games to Watch Graph height*/
+    100vh /* 12 => Go Raps Go! height*/
+    100px /* 13 => footer height*/;
 }
 
 /* This tells the browser to display all elements to full width (mobile first)  */
@@ -209,7 +214,7 @@ a:hover {
 }
 
 .main-head h1 {
-  color: #CD1141;
+  color: #cd1141;
   text-align: center;
   font-size: 15vmin;
   line-height: 1;
@@ -219,98 +224,129 @@ a:hover {
   text-transform: uppercase;
 }
 
+/* Toronto Raptor Logo SVG styles */
+.main-head > svg {
+  width: 95vmin;
+  height: auto;
+}
+
+.st0 {
+  fill: #cd1141;
+}
+
+.st1 {
+  fill: #fff;
+}
+
+.st2 {
+  fill: #a0a0a3;
+}
+
+/* End of header styles */
+
+/* Start of navigation styles */
 .main-nav {
   background-color: hsla(180, 10%, 90%, 0.5);
 }
+
+/* End of navigation styles */
+
+/* Start of wins graph styles */
 
 .wins-graph {
   grid-column: col-start / span 12;
   grid-row: 3 / span 1;
 }
 
-.top-performers {
+/* End of wins graph styles */
+
+/* Start of game margin graph styles */
+
+.game-margin-graph {
   grid-column: col-start / span 12;
   grid-row: 4 / span 1;
 }
 
-.team-ratings {
+/* End of game margin graph styles */
+
+/* Start of playoffs-series-one graph styles */
+
+.playoffs-series-one {
   grid-column: col-start / span 12;
   grid-row: 5 / span 1;
 }
 
-.playoff-brackets {
+/* End of playoffs-series-one styles */
+
+/* Start of playoffs-series-two styles */
+
+.playoffs-series-two {
   grid-column: col-start / span 12;
   grid-row: 6 / span 1;
 }
 
-/* GSW Champs section starts here */
-.nba-champs {
+/* End of playoffs-series-two styles */
+
+/* Start of heartbreak styles */
+
+.heartbreak {
   grid-column: col-start / span 12;
   grid-row: 7 / span 1;
   border-top: 1px solid grey;
   padding: 10px;
 }
 
-.champs-header {
-  display: flex;
-  justify-content: space-between;
+/* End of heartbreak styles */
+
+/* Start of offseason styles */
+
+.offseason {
+  grid-column: col-start / span 12;
+  grid-row: 8 / span 1;
 }
 
-.champs-header img {
-  height: 5rem;
+/* End of offseason styles */
+
+/* Start of kawhi-demar-trade styles */
+
+.kawhi-demar-trade {
+  grid-column: col-start / span 12;
+  grid-row: 9 / span 1;
 }
 
-.gsw-lineup {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+/* End of kawhi-demar-trade styles */
+
+/* Start of starting-line-up styles */
+
+.starting-line-up {
+  grid-column: col-start / span 12;
+  grid-row: 10 / span 1;
 }
 
-.gsw-card {
-  width: 45%;
-  border: 1px solid grey;
-  margin-bottom: 20px;
+/* End of starting-line-up styles */
+
+/* Start of games-to-watch styles */
+
+.games-to-watch {
+  grid-column: col-start / span 12;
+  grid-row: 11 / span 1;
 }
 
-.gsw-card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10px;
-  border-bottom: 1px solid grey;
-  font-size: 150%;
+/* End of games-to-watch styles */
+
+/* Start of go-raps-go styles */
+
+.go-raps-go {
+  grid-column: col-start / span 12;
+  grid-row: 12 / span 1;
 }
 
-.gsw-card-header p {
-  border-left: 1px solid grey;
-  padding-left: 10px;
-  height: 100%;
-}
-
-.gsw-card img {
-  width: 100%;
-  height: auto;
-  margin-top: 30px;
-  border-bottom: 1px solid grey;
-}
-
-.playoff-stats p {
-  padding: 4px 8px;
-  margin: 0;
-}
-
-.stats-number {
-  float: right;
-}
-
-.playoff-stats .stats-big {
-  font-size: 150%;
-}
+/* End of go-raps-go styles */
 
 /* Footer information starts here  */
 .main-footer {
   grid-column: col-start / span 12;
-  grid-row: 8 / span 1;
+  grid-row: 13 / span 1;
   background-color: hsla(225, 7%, 24%, 1);
   display: flex;
   align-items: center;
