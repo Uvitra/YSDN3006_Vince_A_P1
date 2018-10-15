@@ -153,20 +153,24 @@ body {
   font: normal normal 400 12px/1.2 "Zilla Slab", sans-serif;
 }
 
+p {
+  color: white;
+}
+
 .content > h1 {
   color: white;
   font-size: 5vmin;
 }
 
 a {
-  color: hsla(210, 5%, 5%, 1);
+  color: hsla(345, 55%, 50%, 1);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.5s;
 }
 
 a:hover {
-  color: hsla(10, 85%, 50%, 1);
+  color: hsl(345, 85%, 44%);
 }
 
 /* Start of CSS Grid Layout */
@@ -178,7 +182,7 @@ a:hover {
   grid-gap: 20px;
   grid-template-rows:
     100vh /* 1  => main-head splash height */
-    50px  /* 2  => nav height //subject to change */
+    auto  /* 2  => nav height //subject to change */
     100vh /* 3  => wins graph height */
     100vh /* 4  => margins over time graph height*/
     100vh /* 5  => Playoffs 1 height*/
@@ -189,7 +193,7 @@ a:hover {
     100vh /* 10 => 2018–19 Starting Line-up height*/
     100vh /* 11 => Top Ten Games to Watch Graph height*/
     100vh /* 12 => Go Raps Go! height*/
-    100px /* 13 => footer height*/;
+    auto  /* 13 => footer height*/;
 }
 
 /* This tells the browser to display all elements to full width (mobile first)  */
@@ -214,14 +218,15 @@ a:hover {
 }
 
 .main-head h1 {
-  color: #cd1141;
+  color: hsl(345, 85%, 44%);
   text-align: center;
   font-size: 15vmin;
   line-height: 1;
   font-weight: 900;
   font-variant: normal;
-  text-shadow: 4px 4px hsla(210, 5%, 5%, 0.25);
+  text-shadow: 8px 4px hsla(210, 5%, 5%, 0.5);
   text-transform: uppercase;
+  opacity: 0.9;
 }
 
 /* Toronto Raptor Logo SVG styles */
@@ -231,15 +236,15 @@ a:hover {
 }
 
 .st0 {
-  fill: #cd1141;
+  fill: hsl(345, 85%, 44%);
 }
 
 .st1 {
-  fill: #fff;
+  fill: white;
 }
 
 .st2 {
-  fill: #a0a0a3;
+  fill: hsl(240, 2%, 63%);
 }
 
 /* End of header styles */
@@ -314,6 +319,49 @@ a:hover {
   grid-row: 9 / span 1;
 }
 
+.kawhi-demar-pictures {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid grey;
+  background:
+    linear-gradient(to left, blue, transparent),
+    linear-gradient(to right, red, transparent);
+  transition: background 1s;
+}
+
+.kawhi-demar-pictures > img {
+  width: auto;
+  height: 50vmin;
+}
+
+.trade-derozen,
+.trade-kawhi {
+  transform: translateX(0);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+  transition: transform 1s, background 1s;
+  z-index: 0;
+}
+
+/* .trade-derozen {
+  background: linear-gradient(to right, rgba(255, 0, 0, 0), transparent);
+}
+
+.trade-kawhi {
+  background: linear-gradient(to left, rgba(0, 0, 255, 0), transparent);
+} */
+
+.trade-derozen:hover {
+  transform: translateX(4vw);
+  background: linear-gradient(90deg, rgba(255, 0, 0, 0.5), transparent);
+  z-index: 10;
+}
+
+.trade-kawhi:hover {
+  transform: translateX(-4vw);
+  background: linear-gradient(270deg, rgba(0, 0, 255, 0.5), transparent);
+  z-index: 10;
+}
+
 /* End of kawhi-demar-trade styles */
 
 /* Start of starting-line-up styles */
@@ -347,7 +395,7 @@ a:hover {
 .main-footer {
   grid-column: col-start / span 12;
   grid-row: 13 / span 1;
-  background-color: hsla(225, 7%, 24%, 1);
+  background-color: hsl(240, 1%, 19%);
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -355,11 +403,8 @@ a:hover {
 
 .main-footer > p {
   width: 25%;
+  color: white;
   text-align: center;
-}
-
-.playoff-stats > p:nth-child(even) {
-  background-color: hsla(210, 5%, 95%, 1);
 }
 
 /* Mobile first styles end here */
