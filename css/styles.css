@@ -428,6 +428,11 @@ a:hover {
   grid-row: 3 / span 1;
 }
 
+.wins-graph-svg {
+  color: white;
+}
+
+
 /* End of wins graph styles */
 
 /* Start of game margin graph styles */
