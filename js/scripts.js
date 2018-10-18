@@ -64,7 +64,7 @@ winsGraphData.then(function(d) {
 		.domain([0, 70]).nice()
 		.range([height - margin.bottom, margin.top]);
 
-	let yAxis = d3.axisLeft(y).ticks(3).tickPadding(10).tickSize(10);
+	let yAxis = d3.axisLeft(y).ticks(5).tickPadding(10).tickSize(10);
 	let xAxis = g => g
 		.attr("transform", `translate(0,${height - margin.bottom})`)
 		.call(d3.axisBottom(x).ticks(width / 80).tickSizeOuter(0));
@@ -93,7 +93,8 @@ winsGraphData.then(function(d) {
 
 	chartGroup.append("path")
 		.attr("fill", "none")
-		.attr("stroke", "blue")
+		.attr("stroke-width", "2")
+		.attr("stroke", "hsl(345, 85%, 44%)")
 		.attr("d",line(d));
 
 });
@@ -209,7 +210,7 @@ calendarData.then(function(d) {
 	// console.log(data);
 
 	let cellSize = 17;
-	let width = window.innerWidth*.95;
+	let width = window.innerWidth*0.95;
 	let height = cellSize * (weekday === "weekday" ? 7 : 9);
 	let timeWeek = weekday === "sunday" ? d3.timeSunday : d3.timeMonday;
 	let countDay = weekday === "sunday" ? d => d.getDay() : d => (d.getDay() + 6) % 7;
@@ -227,7 +228,7 @@ calendarData.then(function(d) {
 	let formatDate = d3.timeFormat("%x");
 	let formatDay = d => "SMTWTFS"[d.getDay()];
 	let formatMonth = d3.timeFormat("%b");
-	let color = d3.scaleSequential(d3.interpolatePiYG).domain([-0.05, 0.05]);
+	// let color = d3.scaleSequential(d3.interpolatePiYG).domain([-0.05, 0.05]);
 
 	const years = d3.nest()
 		.key(d => d.date.getFullYear())

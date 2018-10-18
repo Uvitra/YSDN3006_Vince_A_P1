@@ -349,14 +349,14 @@ a:hover {
     100vh /* 2  => height of recap. //subject to change */
     100vh /* 3  => wins graph height */
     100vh /* 4  => margins over time graph height*/
-    100vh /* 5  => Playoffs 1 height*/
-    100vh /* 6  => Playoffs 2 height*/
+    auto /* 5  => Playoffs 1 height*/
+    auto /* 6  => Playoffs 2 height*/
     100vh /* 7  => Heartbreak height*/
     100vh /* 8  => Offseason height*/
     auto /* 9  => Kawhi & DeMar Trade height*/
     auto /* 10 => 2018–19 Starting Line-up height*/
-    100vh /* 11 => Top Ten Games to Watch Graph height*/
-    100vh /* 12 => Go Raps Go! height*/
+    auto /* 11 => Top Ten Games to Watch Graph height*/
+    auto /* 12 => Go Raps Go! height*/
     auto  /* 13 => footer height*/;
 }
 
@@ -385,7 +385,8 @@ a:hover {
 .main-head .svg-container {
   display: block;
   padding-top: 10vh;
-  width: 90vw;
+  max-width: 90vw;
+  max-height: 50vh;
   height: auto;
 }
 
@@ -398,9 +399,10 @@ a:hover {
   line-height: 1;
   font-weight: 700;
   font-variant: normal;
-  /* text-shadow: 8px 4px hsla(210, 5%, 5%, 0.5); */
+  text-shadow: 0 0 10px hsla(210, 5%, 5%, 0.75);
   text-transform: uppercase;
-  opacity: 0.9;
+  opacity: 1;
+  z-index: 1;
 }
 
 /* Toronto Raptor Logo SVG styles */
@@ -456,6 +458,16 @@ a:hover {
 .introduction {
   grid-column: col-start / span 12;
   grid-row: 2 / span 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 6vmin;
+}
+
+.last-words {
+  width: 50vw;
+  margin-left: auto;
+  align-content: flex-end;
 }
 
 /* End of navigation styles */
@@ -465,6 +477,10 @@ a:hover {
 .wins-graph {
   grid-column: col-start / span 12;
   grid-row: 3 / span 1;
+}
+
+.content > p {
+  font-size: 8vmin;
 }
 
 .wins-graph-svg {
@@ -498,6 +514,10 @@ a:hover {
   grid-row: 5 / span 1;
 }
 
+.final-words {
+  margin-left: auto;
+  float: right;
+}
 /* End of playoffs-series-one styles */
 
 /* Start of playoffs-series-two styles */
@@ -505,6 +525,85 @@ a:hover {
 .playoffs-series-two {
   grid-column: col-start / span 12;
   grid-row: 6 / span 1;
+}
+
+.box-score-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60vmin;
+  border: 1px solid grey;
+  background-color: hsla(10, 5%, 15%, 1);
+  padding: 0 5px;
+  border-radius: 4px;
+}
+
+.box-score-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.box-score-header .teambox {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.box-score-header .teambox p,
+.box-score-header .teambox img {
+  width: 100%;
+}
+
+.teambox .conference-position {
+  font-size: x-small;
+}
+
+.teambox-left .conference-position {
+  text-align: left;
+}
+
+.teambox-right .conference-position {
+  text-align: right;
+}
+
+.game {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid grey;
+  padding: 10px 5px;
+  margin: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+
+.game:nth-child(even) {
+  background-color: hsla(10, 5%, 20%, 1);
+}
+
+.game:hover {
+  background-color: hsla(10, 5%, 25%, 1);
+}
+
+.game .game-number {
+  width: 33%;
+  margin: 0;
+}
+
+.game .game-score {
+  width: 66%;
+  margin: 0;
+}
+
+.faded {
+  opacity: 0.65;
 }
 
 /* End of playoffs-series-two styles */
