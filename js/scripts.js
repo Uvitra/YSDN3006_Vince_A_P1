@@ -47,7 +47,7 @@ winsGraphData.then(function(d) {
 	// console.log(d3.extent(dataDates));
 
 	let height = window.innerHeight*.5;
-	let width = (window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth)*.8;
+	let width = window.innerWidth > 1200 ? 1200 : window.innerWidth*.8;
 
 	let margin = {
 		left: 50,
@@ -130,10 +130,10 @@ gameMarginsData.then(function(d) {
 
 	// console.log(d3.extent(regularSeasonGamesDates));
 
-	let width = window.innerWidth * 0.95;
+	let width = window.innerWidth > 1200 ? 1200 : window.innerWidth*.95;
 	let height = window.innerHeight * 0.5;
 	// let height = 200;
-	let margin = {top: 20, right: 20, bottom: 0, left: 20};
+	let margin = {top: 20, right: 20, bottom: 0, left: 24};
 	let x, y, xAxis, yAxis, colour;
 
 	colour = d3.scaleSequential(d3.interpolateRdYlGn);
@@ -210,7 +210,7 @@ calendarData.then(function(d) {
 	// console.log(data);
 
 	let cellSize = 17;
-	let width = window.innerWidth*0.95;
+	let width = window.innerWidth > 1200 ? 1200 : window.innerWidth*.95;
 	let height = cellSize * (weekday === "weekday" ? 7 : 9);
 	let timeWeek = weekday === "sunday" ? d3.timeSunday : d3.timeMonday;
 	let countDay = weekday === "sunday" ? d => d.getDay() : d => (d.getDay() + 6) % 7;

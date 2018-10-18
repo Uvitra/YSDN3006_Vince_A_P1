@@ -276,6 +276,12 @@ p {
   font-weight: 800;
   color: hsl(345, 85%, 44%);
   opacity: 0.85;
+  transition: all 500ms;
+}
+
+.zilla-text-highlight-regular:hover {
+  color: hsl(345, 85%, 33%);
+  opacity: 0.9;
 }
 
 .zilla-text-highlight-bold {
@@ -283,6 +289,12 @@ p {
   font-weight: 900;
   color: hsl(345, 85%, 44%);
   opacity: 0.75;
+  transition: all 500ms;
+}
+
+.zilla-text-highlight-bold:hover {
+  color: hsl(345, 85%, 33%);
+  opacity: 0.8;
 }
 
 .content > h1 {
@@ -304,6 +316,10 @@ a {
 
 a:hover {
   color: hsl(345, 85%, 44%);
+}
+
+.tick text {
+  font: normal normal 2vmin/1 "IBM Plex Mono", monospace;
 }
 
 /* Start of CSS Grid Layout */
@@ -979,7 +995,7 @@ a:hover {
       auto  /* 9  => Kawhi & DeMar Trade height*/
       auto  /* 10 => 2018–19 Starting Line-up height*/
       auto  /* 11 => Top Ten Games to Watch Graph height*/
-      auto  /* 12 => Go Raps Go! height*/
+      100vh  /* 12 => Go Raps Go! height*/
       auto; /* all auto after 12 */
   }
 
@@ -1030,11 +1046,35 @@ a:hover {
     grid-column: col-start / span 12;
   }
 
+  .kawhi-demar-trade .trade-summary-paragraph {
+    line-height: 1.16;
+  }
+
+  .player-name {
+    padding: 3px 0;
+  }
+
+  .starting-line-up .coaching-staff div {
+    font-size: 18px;
+  }
+
+  .cheer-paragraph {
+    margin: 0.5em 0;
+    font-size: 10vw;
+    width: 100vw;
+  }
 }
 
 @media (min-width: 992px) {
   .content {
-    grid-column: col-start 3 / span 8;
+    grid-column: col-start / span 12;
+  }
+
+  .games-to-watch-svg {
+    transform: scale(3.14);
+    transform-origin: top left;
+    width: 100%;
+    height: 70vh;
   }
 }
 
@@ -1047,33 +1087,40 @@ a:hover {
 
   .wrapper {
     width: 1200px;
-  }
-
-  .main-nav {
-    grid-column: col-start / span 2;
-    grid-row: 2 / 4;
+    margin: 0 auto;
   }
 
   .content {
-    grid-column: col-start 3 / span 8;
-  }
-
-  .side {
-    grid-column: col-start 11 / span 2;
-    grid-row: 2;
-  }
-
-  .ad {
-    grid-column: col-start 11 / span 2;
-    grid-row: 3;
-  }
-
-  /* .main-footer {
     grid-column: col-start / span 12;
-  } */
+  }
 
-  nav ul {
-    flex-direction: column;
+  .last-words {
+    width: 35vw;
+    text-align: right;
+  }
+
+  .wins-graph .tick text {
+    font-size: 0.75vmin;
+  }
+
+  .game-margin-graph {
+    width: 100%;
+  }
+
+  .game-margin-graph .tick text {
+    font-size: 1.5vmin;
+  }
+
+  .content .game-margin-svg {
+    height: 70vh;
+  }
+
+  .games-to-watch-svg {
+    transform: scale(2);
+    transform-origin: top left;
+    width: auto;
+    margin: 0 auto;
+    height: 50vh;
   }
 }
 
