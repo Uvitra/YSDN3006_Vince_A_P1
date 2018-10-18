@@ -1,36 +1,5 @@
 /* Import some fonts */
 
-/* FiraSansCompressed files */
-@font-face {
-  font-family: FiraSansCompressed;
-  src: url(../assets/fonts/Compressed/Roman/FiraSansCompressed-Heavy.woff2);
-  font-weight: 900;
-}
-
-@font-face {
-  font-family: FiraSansCompressed;
-  src: url(../assets/fonts/Compressed/Roman/FiraSansCompressed-ExtraBold.woff2);
-  font-weight: 800;
-}
-
-@font-face {
-  font-family: FiraSansCompressed;
-  src: url(../assets/fonts/Compressed/Roman/FiraSansCompressed-Bold.woff2);
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: FiraSansCompressed;
-  src: url(../assets/fonts/Compressed/Roman/FiraSansCompressed-Medium.woff2);
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: FiraSansCompressed;
-  src: url(../assets/fonts/Compressed/Roman/FiraSansCompressed-regular.woff2);
-  font-weight: 400;
-}
-
 /* Zilla Slab files */
 @font-face {
   font-family: "Zilla Slab";
