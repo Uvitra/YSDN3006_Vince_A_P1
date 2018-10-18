@@ -5,6 +5,12 @@
 
 document.querySelector("p").setAttribute("style", "background-color: hsla(180, 75%, 75%, 0.75);");
 
+setTimeout(function(){
+	let randomDegree = Math.floor(Math.random()*361-180);
+	let currentBallRotation = document.getElementById("Ball");
+	currentBallRotation.setAttribute("style", `transform: rotation(${randomDegree}deg)`);
+}, 500);
+
 // D3 Related
 
 // d3.select(window).on("resize", callFunction);
@@ -171,10 +177,123 @@ gameMarginsData.then(function(d) {
 
 });
 
-
-// console.log(winsGraphData);
-
 //End of game margin graph
 
+// Start of calendar view
+
+let calendarData = d3.csv("../assets/data/calendarData.csv", function (d) {
+	// console.log(d);
+	return {
+		date: new Date(d.date),
+		gameNumber: +d.gameNumber,
+		homeGame: d.homeGame === "TRUE" ? true : false,
+		notableGame: d.notableGame === "TRUE" ? true : false,
+		opponent: d.opponent,
+		whyNotable: d.whyNotable
+	};
+});
+
+// console.log(calendarData);
+let weekday;
+
+calendarData.then(function(d) {
+
+	let data = [];
+
+	for (var i = 0; i < d.length; i++) {
+		data[i] = {date: d[i].date, value: 1, };
+	}
+
+	data = d;
+
+	// console.log(data);
+
+	let cellSize = 17;
+	let width = window.innerWidth*.95;
+	let height = cellSize * (weekday === "weekday" ? 7 : 9);
+	let timeWeek = weekday === "sunday" ? d3.timeSunday : d3.timeMonday;
+	let countDay = weekday === "sunday" ? d => d.getDay() : d => (d.getDay() + 6) % 7;
+
+	function pathMonth(t) {
+		const n = weekday === "weekday" ? 5 : 7;
+		const d = Math.max(0, Math.min(n, countDay(t)));
+		const w = timeWeek.count(d3.timeYear(t), t);
+		return `${d === 0 ? `M${w * cellSize},0`
+			: d === n ? `M${(w + 1) * cellSize},0`
+				: `M${(w + 1) * cellSize},0V${d * cellSize}H${w * cellSize}`}V${n * cellSize}`;
+	}
+
+	let format = d3.format("+.2%");
+	let formatDate = d3.timeFormat("%x");
+	let formatDay = d => "SMTWTFS"[d.getDay()];
+	let formatMonth = d3.timeFormat("%b");
+	let color = d3.scaleSequential(d3.interpolatePiYG).domain([-0.05, 0.05]);
+
+	const years = d3.nest()
+		.key(d => d.date.getFullYear())
+		.entries(data);
+		// .reverse();
+
+	const svg = d3.select(".games-to-watch")
+		.append("svg")
+		.attr("width", width+"px")
+		.attr("height", (height*years.length)+"px")
+		.classed("games-to-watch-svg", true);
+		// .style("font", "10px sans-serif")
+		// .style("width", "100%")
+		// .style("height", "auto");
+
+	const year = svg.selectAll("g")
+		.data(years)
+		.enter().append("g")
+		.attr("transform", (d, i) => `translate(40,${height * i + cellSize * 1.5})`);
+
+	year.append("text")
+		.attr("x", -5)
+		.attr("y", -5)
+		.attr("font-weight", "bold")
+		.attr("text-anchor", "end")
+		.text(d => d.key);
+
+	year.append("g")
+		.attr("text-anchor", "end")
+		.selectAll("text")
+		.data((weekday === "weekday" ? d3.range(2, 7) : d3.range(7)).map(i => new Date(2017, 0, i)))
+		.enter().append("text")
+		.attr("x", -5)
+		.attr("y", d => (countDay(d) + 0.5) * cellSize)
+		.attr("dy", "0.31em")
+		.text(formatDay);
+
+	year.append("g").attr("class", "a-very-nice-class")
+		.selectAll("rect")
+		.data(d => d.values)
+		.enter().append("rect")
+		.attr("width", cellSize - 1)
+		.attr("height", cellSize - 1)
+		.attr("x", d => timeWeek.count(d3.timeYear(d.date), d.date) * cellSize + 0.5)
+		.attr("y", d => countDay(d.date) * cellSize + 0.5)
+		.attr("fill", d => d.homeGame === true ? "hsl(345, 85%, 44%)" : "hsl(255, 85%, 44%)")
+		.attr("stroke", d => d.notableGame === true ? "yellow" : "")
+		.append("title")
+		.text(d => `${formatDate(d.date)} — The Raptors are ${d.homeGame === true ? "hosting" : "playing at"} the ${d.opponent}. ${d.whyNotable}`);
+
+	const month = year.append("g").attr("class", "a-very-nice-class")
+		.selectAll("g")
+		.data(d => d3.timeMonths(d3.timeMonth(d.values[0].date), d.values[d.values.length - 1].date))
+		.enter().append("g");
+
+	month.filter((d, i) => i).append("path")
+		.attr("fill", "none")
+		.attr("stroke", "#fff")
+		.attr("stroke-width", 2)
+		.attr("d", pathMonth);
+
+	month.append("text")
+		.attr("x", d => timeWeek.count(d3.timeYear(d), timeWeek.ceil(d)) * cellSize + 2)
+		.attr("y", -5)
+		.text(formatMonth);
+
+});
 
 // }

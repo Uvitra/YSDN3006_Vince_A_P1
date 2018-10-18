@@ -305,11 +305,15 @@ p {
 .zilla-text-highlight-regular {
   font-family: "Zilla Slab", monospace;
   font-weight: 800;
+  color: hsl(345, 85%, 44%);
+  opacity: 0.85;
 }
 
 .zilla-text-highlight-bold {
   font-family: "Zilla Slab", monospace;
   font-weight: 900;
+  color: hsl(345, 85%, 44%);
+  opacity: 0.75;
 }
 
 .content > h1 {
@@ -720,6 +724,10 @@ a:hover {
   margin-bottom: 10px;
 }
 
+.coaching-staff h4 {
+  border-bottom: 1px solid grey;
+}
+
 .coaching-staff .coaching-categories {
   margin: 0;
   display: flex;
@@ -727,10 +735,12 @@ a:hover {
 }
 
 .coaching-staff .coaching-categories div {
-  width: 30vw;
-  padding: 0 10px;
+  width: 33vw;
 }
 
+.coaching-staff .coaching-categories div > * {
+  padding: 0 10px;
+}
 .coaching-staff .coaching-categories div:nth-child(2) {
   border-left: 1px solid grey;
   border-right: 1px solid grey;
@@ -743,6 +753,31 @@ a:hover {
 .games-to-watch {
   grid-column: col-start / span 12;
   grid-row: 11 / span 1;
+}
+
+.games-to-watch-svg,
+.games-to-watch-svg text {
+  color: white;
+  fill: white;
+}
+
+.games-to-watch-svg g:first-child > .a-very-nice-class {
+  border: 1000px solid red;
+  transform: translateX(-645px);
+}
+
+.games-to-watch-svg g g rect {
+  transition: all 500ms;
+}
+
+.games-to-watch-svg g g rect:hover {
+  color: white;
+  transform: translateZ(100px);
+  fill: rgb(255, 100, 25);
+}
+
+.notableGame {
+  fill: yellow;
 }
 
 /* End of games-to-watch styles */
