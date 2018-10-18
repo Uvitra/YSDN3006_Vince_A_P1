@@ -19,7 +19,7 @@
 // function callFunction() {
 
 // start of Wins Graph Code
-let winsGraphData = d3.csv("../assets/data/winsData.csv", function (d) {
+let winsGraphData = d3.csv("assets/data/winsData.csv", function (d) {
 	// console.log(d);
 	return {
 		city: d.city,
@@ -102,7 +102,7 @@ winsGraphData.then(function(d) {
 
 //Start of game margin graph
 
-let gameMarginsData = d3.csv("../assets/data/201718RapsGames.csv", function (d) {
+let gameMarginsData = d3.csv("assets/data/201718RapsGames.csv", function (d) {
 	// console.log(d);
 	return {
 		attendence: +d.attendence,
@@ -182,7 +182,7 @@ gameMarginsData.then(function(d) {
 
 // Start of calendar view
 
-let calendarData = d3.csv("../assets/data/calendarData.csv", function (d) {
+let calendarData = d3.csv("assets/data/calendarData.csv", function (d) {
 	// console.log(d);
 	return {
 		date: new Date(d.date),
