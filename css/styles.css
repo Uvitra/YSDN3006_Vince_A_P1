@@ -745,6 +745,43 @@ a:hover {
 .go-raps-go {
   grid-column: col-start / span 12;
   grid-row: 12 / span 1;
+  background-image:
+    linear-gradient(rgba(255, 0, 0, 0.5), rgba(212, 0, 0, 0.75)),
+    url(../assets/img/We-The-North.jpg);
+  background-size: cover;
+  background-position: center;
+  background-color: hsl(240, 1%, 19%);
+}
+
+.cheer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.cheer-paragraph {
+  text-align: center;
+  font-size: 25vmin;
+  font-weight: 700;
+  line-height: 0.75;
+}
+
+.line-height-point-eight {
+  display: inline-block;
+  transform: translate(0, 1.5vmin);
+}
+
+.go-raps-go .image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.go-raps-go .image-container img {
+  width: 95vw;
 }
 
 /* End of go-raps-go styles */
@@ -757,13 +794,13 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  font-size: x-small;
 }
 
-.mainfooter > * {
+.main-footer > * {
   width: 25%;
   color: white;
   text-align: center;
-  font-size: small;
 }
 
 /* Mobile first styles end here */
