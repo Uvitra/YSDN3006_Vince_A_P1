@@ -3,13 +3,13 @@
 
 // Global Javascript
 
-document.querySelector("p").setAttribute("style", "background-color: hsla(180, 75%, 75%, 0.75);");
+// document.querySelector("p").setAttribute("style", "background-color: hsla(180, 75%, 75%, 0.75);");
 
-setTimeout(function(){
-	let randomDegree = Math.floor(Math.random()*361-180);
-	let currentBallRotation = document.getElementById("Ball");
-	currentBallRotation.setAttribute("style", `transform: rotation(${randomDegree}deg)`);
-}, 500);
+// let rotateThatBall = setTimeout(function(){
+// 	let randomDegree = Math.floor(Math.random()*45-23);
+// 	let currentBallRotation = document.getElementById("Ball");
+// 	currentBallRotation.setAttribute("style", `transform: rotate(${randomDegree}deg);`);
+// }, 500);
 
 // D3 Related
 
