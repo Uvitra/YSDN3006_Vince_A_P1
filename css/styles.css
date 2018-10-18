@@ -1100,7 +1100,15 @@ a:hover {
   }
 
   .wins-graph .tick text {
-    font-size: 0.75vmin;
+    font-size: 1vmin;
+  }
+
+  .box-score-container {
+    width: 600px;
+  }
+
+  .starting-line-up-cards .player-card {
+    width: 375px;
   }
 
   .game-margin-graph {
