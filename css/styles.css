@@ -314,7 +314,7 @@ p {
 
 .content > h1 {
   color: white;
-  font-size: 12px;
+  font-size: 10px;
   font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
   font-style: normal;
   font-weight: 300;
@@ -440,6 +440,14 @@ a:hover {
 .game-margin-graph {
   grid-column: col-start / span 12;
   grid-row: 4 / span 1;
+}
+
+.game-margin-svg {
+  color: white;
+}
+
+.axis {
+  color: white;
 }
 
 /* End of game margin graph styles */

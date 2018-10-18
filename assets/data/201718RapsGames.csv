@@ -1,11 +1,4 @@
 date,visitor,visitorPoints,home,homePoints,difference,ot,attendence
-2018-01-01 19:30,Milwaukee Bucks,127,Toronto Raptors,131,4,y,19800
-2018-01-08 19:30,Toronto Raptors,114,Brooklyn Nets,113,1,y,13681
-2018-02-23 19:30,Milwaukee Bucks,122,Toronto Raptors,119,-3,y,20047
-2018-03-07 20:00,Toronto Raptors,121,Detroit Pistons,119,2,y,17769
-2018-03-16 19:30,Dallas Mavericks,115,Toronto Raptors,122,7,y,19800
-2018-04-11 20:00,Toronto Raptors,109,Miami Heat,116,-7,y,19600
-2018-05-01 20:00,Cleveland Cavaliers,113,Toronto Raptors,112,-1,y,19954
 2017-10-19 19:30,Chicago Bulls,100,Toronto Raptors,117,17,n,19800
 2017-10-21 19:30,Philadelphia 76ers,94,Toronto Raptors,128,34,n,19800
 2017-10-23 20:30,Toronto Raptors,97,San Antonio Spurs,101,-4,n,18418
@@ -40,8 +33,10 @@ date,visitor,visitorPoints,home,homePoints,difference,ot,attendence
 2017-12-26 19:00,Toronto Raptors,93,Dallas Mavericks,98,-5,n,20005
 2017-12-27 20:00,Toronto Raptors,107,Oklahoma City Thunder,124,-17,n,18203
 2017-12-29 19:30,Atlanta Hawks,98,Toronto Raptors,111,13,n,19800
+2018-01-01 19:30,Milwaukee Bucks,127,Toronto Raptors,131,4,y,19800
 2018-01-03 20:00,Toronto Raptors,124,Chicago Bulls,115,9,n,20056
 2018-01-05 20:00,Toronto Raptors,129,Milwaukee Bucks,110,19,n,18717
+2018-01-08 19:30,Toronto Raptors,114,Brooklyn Nets,113,1,y,13681
 2018-01-09 19:30,Miami Heat,90,Toronto Raptors,89,-1,n,19800
 2018-01-11 20:00,Cleveland Cavaliers,99,Toronto Raptors,133,34,n,19923
 2018-01-13 19:30,Golden State Warriors,127,Toronto Raptors,125,-2,n,20078
@@ -61,15 +56,18 @@ date,visitor,visitorPoints,home,homePoints,difference,ot,attendence
 2018-02-11 13:00,Toronto Raptors,123,Charlotte Hornets,103,20,n,18320
 2018-02-13 19:00,Miami Heat,112,Toronto Raptors,115,3,n,19800
 2018-02-14 20:00,Toronto Raptors,122,Chicago Bulls,98,24,n,21006
+2018-02-23 19:30,Milwaukee Bucks,122,Toronto Raptors,119,-3,y,20047
 2018-02-26 19:30,Detroit Pistons,94,Toronto Raptors,123,29,n,19800
 2018-02-28 19:00,Toronto Raptors,117,Orlando Magic,104,13,n,17328
 2018-03-02 20:00,Toronto Raptors,102,Washington Wizards,95,7,n,18631
 2018-03-04 18:00,Charlotte Hornets,98,Toronto Raptors,103,5,n,19800
 2018-03-06 19:00,Atlanta Hawks,90,Toronto Raptors,106,16,n,19800
+2018-03-07 20:00,Toronto Raptors,121,Detroit Pistons,119,2,y,17769
 2018-03-09 19:30,Houston Rockets,105,Toronto Raptors,108,3,n,20131
 2018-03-11 13:00,Toronto Raptors,132,New York Knicks,106,26,n,19812
 2018-03-13 19:30,Toronto Raptors,116,Brooklyn Nets,102,14,n,16654
 2018-03-15 19:00,Toronto Raptors,106,Indiana Pacers,99,7,n,17923
+2018-03-16 19:30,Dallas Mavericks,115,Toronto Raptors,122,7,y,19800
 2018-03-18 13:00,Oklahoma City Thunder,132,Toronto Raptors,125,-7,n,19800
 2018-03-20 19:00,Toronto Raptors,93,Orlando Magic,86,7,n,16228
 2018-03-21 19:00,Toronto Raptors,129,Cleveland Cavaliers,132,-3,n,20562
@@ -82,12 +80,14 @@ date,visitor,visitorPoints,home,homePoints,difference,ot,attendence
 2018-04-06 19:30,Indiana Pacers,73,Toronto Raptors,92,19,n,19924
 2018-04-08 18:00,Orlando Magic,101,Toronto Raptors,112,11,n,19948
 2018-04-09 19:00,Toronto Raptors,108,Detroit Pistons,98,10,n,17529
+2018-04-11 20:00,Toronto Raptors,109,Miami Heat,116,-7,y,19600
 2018-04-14 17:30,Washington Wizards,106,Toronto Raptors,114,8,n,19937
 2018-04-17 19:00,Washington Wizards,119,Toronto Raptors,130,11,n,20242
 2018-04-20 20:00,Toronto Raptors,103,Washington Wizards,122,-19,n,20356
 2018-04-22 18:00,Toronto Raptors,98,Washington Wizards,106,-8,n,20356
 2018-04-25 19:00,Washington Wizards,98,Toronto Raptors,108,10,n,19987
 2018-04-27 19:00,Toronto Raptors,102,Washington Wizards,92,10,n,20356
+2018-05-01 20:00,Cleveland Cavaliers,113,Toronto Raptors,112,-1,y,19954
 2018-05-03 18:00,Cleveland Cavaliers,128,Toronto Raptors,110,-18,n,20127
 2018-05-05 20:30,Toronto Raptors,103,Cleveland Cavaliers,105,-2,n,20562
 2018-05-07 20:30,Toronto Raptors,93,Cleveland Cavaliers,128,-35,n,20562
