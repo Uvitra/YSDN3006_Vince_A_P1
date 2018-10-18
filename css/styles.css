@@ -983,85 +983,89 @@ a:hover {
 
 /* Specific media styles (small to large screens) begin here */
 @media (min-width: 576px) {
-  .side {
-    grid-column: col-start / span 3;
-    grid-row: 3;
-  }
-
-  .ad {
-    grid-column: col-start / span 3;
-    grid-row: 4;
-  }
-
   .content {
-    grid-column: col-start 4 / span 9;
+    grid-column: col-start  / span 12;
   }
 
-  nav ul {
-    display: flex;
-    justify-content: space-between;
+  .content > h1 {
+    font-size: 2vmin;
+    letter-spacing: 0.35em;
   }
 
-  /* .main-footer {
-    grid-column: col-start / span 12;
-  } */
+  .content > p,
+  .kawhi-demar-trade .trade-summary-paragraph {
+    font-size: 5vmin;
+  }
+
+  .wrapper {
+    grid-template-rows:
+      100vh /* 1  => main-head splash height */
+      100vh /* 2  => height of recap. //subject to change */
+      auto /* 3  => wins graph height */
+      auto /* 4  => margins over time graph height*/
+      auto  /* 5  => Playoffs 1 height*/
+      auto  /* 6  => Playoffs 2 height*/
+      100vh /* 7  => Heartbreak height*/
+      100vh /* 8  => Offseason height*/
+      auto  /* 9  => Kawhi & DeMar Trade height*/
+      auto  /* 10 => 2018–19 Starting Line-up height*/
+      auto  /* 11 => Top Ten Games to Watch Graph height*/
+      auto  /* 12 => Go Raps Go! height*/
+      auto; /* all auto after 12 */
+  }
+
+  .wins-graph svg {
+    width: 95vw;
+    height: 60vh;
+    margin: 0 auto;
+  }
+
+  .game-margin-graph {
+    /* width: 95vw; */
+    height: 75vh;
+    margin: 0 auto;
+  }
+
+  .teambox .conference-position {
+    font-size: 2.5vmin;
+    padding: 0;
+    margin: 1em 0 0 0;
+  }
+
+  .player-card {
+    width: 30vw;
+  }
+
+  .player-stat-container .stat-name {
+    font-size: 9px;
+  }
+
+  .starting-line-up-cards .other-players .player-name {
+    font-size: 15px;
+  }
+
+  .starting-line-up-cards .other-players .player-title {
+    font-size: 12px;
+  }
+
+  .games-to-watch-svg {
+    transform: scale(2);
+    transform-origin: top left;
+    width: 100%;
+    height: 80vh;
+  }
 }
 
 @media (min-width: 768px) {
-  .main-nav {
-    grid-column: col-start / span 2;
-    grid-row: 2 / 4;
-  }
-
   .content {
-    grid-column: col-start 3 / span 8;
-  }
-
-  .side {
-    grid-column: col-start 11 / span 2;
-    grid-row: 2;
-  }
-
-  .ad {
-    grid-column: col-start 11 / span 2;
-    grid-row: 3;
-  }
-
-  /* .main-footer {
     grid-column: col-start / span 12;
-  } */
-
-  nav ul {
-    flex-direction: column;
   }
+
 }
 
 @media (min-width: 992px) {
-  .main-nav {
-    grid-column: col-start / span 2;
-    grid-row: 2 / 4;
-  }
-
   .content {
     grid-column: col-start 3 / span 8;
-  }
-
-  .side {
-    grid-column: col-start 11 / span 2;
-    grid-row: 2;
-  }
-
-  .ad {
-    grid-column: col-start 11 / span 2;
-    grid-row: 3;
-  }
-
-  /* .main-footer {
-    grid-column: col-start / span 12;
-  } */
-
-  nav ul {
-    flex-direction: column;
   }
 }
 
@@ -1072,9 +1076,9 @@ a:hover {
     justify-content: center;
   } */
 
-  /* .wrapper {
+  .wrapper {
     width: 1200px;
-  } */
+  }
 
   .main-nav {
     grid-column: col-start / span 2;

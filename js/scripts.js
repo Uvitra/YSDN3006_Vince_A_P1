@@ -130,7 +130,7 @@ gameMarginsData.then(function(d) {
 
 	// console.log(d3.extent(regularSeasonGamesDates));
 
-	let width = window.innerWidth * 0.9;
+	let width = window.innerWidth * 0.95;
 	let height = window.innerHeight * 0.5;
 	// let height = 200;
 	let margin = {top: 20, right: 20, bottom: 0, left: 20};
